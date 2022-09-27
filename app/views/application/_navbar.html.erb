@@ -5,7 +5,7 @@
 }
 </style>
 
-<section class="bg-white">
+<section class="bg-teal-500">
   <div class="container xl:px-24 m-auto">
 
       <nav class="flex items-center pl-5 pr-1 py-3">
@@ -14,7 +14,7 @@
             <!-- <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600">
             </div> -->
             <i class="fas fa-capsules text-blue-600"></i>
-            <h2 class="block p-2 text-xl font-medium tracking-tighter text-black transition duration-500 ease-in-out transform cursor-pointer hover:text-blueGray-500 lg:text-x lg:mr-8"> Rails Kick Off!</h2>
+            <h2 class="block p-2 text-xl font-medium tracking-tighter transition duration-500 ease-in-out transform cursor-pointer text-gray-50 lg:text-x lg:mr-8"> Rails Kick Off!</h2>
           </div>
         </a>
         <div class="ml-auto lg:hidden">
@@ -72,11 +72,11 @@
 
 
         <% else %>
-          <%= link_to "Sign in", new_user_session_url, class: "hidden md:block block p-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-full focus:shadow-outline focus:outline-none lg:ml-auto" %>
+          <%= link_to "Sign in", new_user_session_url, class: "hidden md:block block p-2 text-base text-gray-50 transition duration-500 ease-in-out transform rounded-full focus:shadow-outline focus:outline-none lg:ml-auto" %>
 
 
           <div class="relative mr-3">
-            <%= link_to "Get Started", new_user_registration_url, class: "hidden bg-blue-600 hover:bg-blue-700 md:block block p-2 px-3 text-white text-sm transition duration-500 ease-in-out transform rounded-full focus:outline-none lg:ml-auto" %>
+            <%= link_to "Get Started", new_user_registration_url, class: "hidden bg-stone-800 hover:bg-stone-900 md:block block p-2 px-3 text-white text-sm transition duration-500 ease-in-out transform rounded-full focus:outline-none lg:ml-auto" %>
           </div>
         <% end %>
       </nav>
