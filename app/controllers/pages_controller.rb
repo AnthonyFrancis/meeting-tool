@@ -3,4 +3,7 @@ class PagesController < ApplicationController
   end
   def agenda
   end
+
+  def home
+  end
 end

@@ -25,7 +25,11 @@ gem 'jbuilder', '~> 2.7'
 
 # custom gems
 gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection", "~> 1.0"
 gem "sprockets-rails"
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
