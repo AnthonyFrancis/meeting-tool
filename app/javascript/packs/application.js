@@ -11,7 +11,7 @@ import "channels"
 
 // Stylesheets & packs
 import "components/1351.js"; // FontAwesome Pro
-import "stylesheets/application"
+// import "stylesheets/application"
 import "./main.js";
 
 Rails.start()
