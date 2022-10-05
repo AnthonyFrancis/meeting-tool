@@ -26,7 +26,7 @@ Setup Application
 * bundle exec rake webpacker:install
 * Overwrite N
 * bin/webpack-dev-server #if you want to run webpack server in the background
-* ./bin/dev or Rails s
+* ./bin/dev
 
 Comes Complete With
 

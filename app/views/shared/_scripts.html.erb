@@ -1,0 +1,282 @@
+<script type="text/javascript">
+
+// Crisp
+
+window.$crisp=[];window.CRISP_WEBSITE_ID="f162469b-487c-49f2-93c0-633710135e5c";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+
+
+// Modal
+    // document.addEventListener("turbo:load", function() {
+    //   var openmodal = document.querySelectorAll('.modal-open')
+    //   for (var i = 0; i < openmodal.length; i++) {
+    //     openmodal[i].addEventListener('click', function(event){
+    //     event.preventDefault()
+    //     toggleModal()
+    //     })
+    //   }
+      
+    //   const overlay = document.querySelector('.modal-overlay')
+    //   overlay.addEventListener('click', toggleModal)
+      
+    //   var closemodal = document.querySelectorAll('.modal-close')
+    //   for (var i = 0; i < closemodal.length; i++) {
+    //     closemodal[i].addEventListener('click', toggleModal)
+    //   }
+      
+    //   document.onkeydown = function(evt) {
+    //     evt = evt || window.event
+    //     var isEscape = false
+    //     if ("key" in evt) {
+    //     isEscape = (evt.key === "Escape" || evt.key === "Esc")
+    //     } else {
+    //     isEscape = (evt.keyCode === 27)
+    //     }
+    //     if (isEscape && document.body.classList.contains('modal-active')) {
+    //     toggleModal()
+    //     }
+    //   };
+      
+      
+    //   function toggleModal () {
+    //     const body = document.querySelector('body')
+    //     const modal = document.querySelector('.modal')
+    //     modal.classList.toggle('opacity-0')
+    //     modal.classList.toggle('pointer-events-none')
+    //     body.classList.toggle('modal-active')
+    //   }
+    // });
+    
+
+    // function toggleModal(modalID){
+    //   document.getElementById(modalID).classList.toggle("hidden");
+    //   document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    //   document.getElementById(modalID).classList.toggle("flex");
+    //   document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+    // }
+
+  function modal() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+
+  function room_edit() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+  function poll_edit() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+  function modal_offer() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+  function edit_poll() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+  function edit_offer() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+
+  function edit_question_live() {
+    return {
+      state: 'CLOSED', // [CLOSED, TRANSITION, OPEN]
+      open() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'OPEN' }, 50)
+      },
+      close() {
+        this.state = 'TRANSITION'
+        setTimeout(() => { this.state = 'CLOSED' }, 300)
+      },
+      isOpen() { return this.state === 'OPEN' },
+      isOpening() { return this.state !== 'CLOSED' },
+    }
+  }
+
+  // Disappearing notice
+  window.setTimeout(function() {
+      $(".notice_alert").fadeTo(1000, 0).slideUp(500, function(){
+          $(this).remove(); 
+      });
+  }, 4000);
+
+    // Card Navbar Tabs
+
+    document.addEventListener("turbo:load", function() { 
+    const tabs = document.querySelectorAll(".tabs");
+    const tab = document.querySelectorAll(".tab");
+    const panel = document.querySelectorAll(".tab-content");
+
+    function onTabClick(event) {
+
+      // deactivate existing active tabs and panel
+
+      for (let i = 0; i < tab.length; i++) {
+        tab[i].classList.remove("active");
+      }
+
+      for (let i = 0; i < panel.length; i++) {
+        panel[i].classList.remove("active");
+      }
+
+
+      // activate new tabs and panel
+      event.target.classList.add('active');
+      let classString = event.target.getAttribute('data-target');
+      console.log(classString);
+      document.getElementById('panels').getElementsByClassName(classString)[0].classList.add("active");
+    }
+
+    for (let i = 0; i < tab.length; i++) {
+      tab[i].addEventListener('click', onTabClick, false);
+    }
+    })
+
+    // live Offer Text Preview
+
+    function liveHeadline() {
+      var x = document.getElementById("headline").value;
+      document.getElementById("prev_headline").innerHTML = "" + x;
+    }
+
+    function liveMessage() {
+      var x = document.getElementById("message").value;
+      document.getElementById("prev_message").innerHTML = "" + x;
+    }
+
+    function liveButton() {
+      var x = document.getElementById("button_text").value;
+      document.getElementById("prev_button_text").innerHTML = "" + x;
+    }
+
+    // live Offer Image Preview
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    // from alert close button
+
+    function closeAlert(event){
+      let element = event.target;
+      while(element.nodeName !== "BUTTON"){
+        element = element.parentNode;
+      }
+      element.parentNode.parentNode.removeChild(element.parentNode);
+    }
+
+    // maxLength for announcements
+
+    function countChars(obj){
+        var maxLength = 100;
+        var strLength = obj.value.length;
+        var charRemain = (maxLength - strLength);
+        
+        if(charRemain < 0){
+            document.getElementById("charNum100").innerHTML = '<span style="color: red;">You have exceeded the limit of '+maxLength+' characters</span>';
+        }else{
+            document.getElementById("charNum100").innerHTML = charRemain+' characters remaining';
+        }
+    }
+
+    // maxLength for rooms
+
+    function countRoom(obj){
+        var maxLength = 10;
+        var strLength = obj.value.length;
+        var charRemain = (maxLength - strLength);
+        
+        if(charRemain < 0){
+            document.getElementById("charNum").innerHTML = ''+maxLength+' characters</span>';
+        }else{
+            document.getElementById("charNum").innerHTML = charRemain+'';
+        }
+    }
+
+    //my should_set_interval_for_stats = true;
+    
+</script>

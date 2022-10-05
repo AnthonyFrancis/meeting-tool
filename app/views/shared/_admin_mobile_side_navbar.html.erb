@@ -1,0 +1,54 @@
+<div class="relative z-50 hidden navbar-menu">
+    <div class="fixed inset-0 opacity-25 navbar-backdrop bg-blueGray-800"></div>
+    <nav class="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm py-6 overflow-y-auto bg-white border-r">
+      <div class="flex items-center mb-8 px-6">
+        <a class="mr-auto text-3xl font-semibold leading-none" href="#"><img class="h-10" src="/assets/logos/metis/poll.png" alt="" width="auto"></a>
+        <button class="navbar-close">
+          <svg class="w-6 h-6 cursor-pointer text-blueGray-400 hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+         <%= link_to root_path, class: ["flex items-center mt-4 py-2 px-6 text-gray-700 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-700", ("bg-gray-200" if request.path == root_path) ] do %>
+          <i class="fas fa-person-booth fa-lg"></i>
+          <span class="mx-3">My Rooms</span>
+          <% end %>
+
+          <%= link_to "https://pollapp.cc/pricing", class: "flex items-center mt-4 py-2 px-6 text-gray-700 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-700" do %>
+              <i class="fas fa-star fa-lg"></i>
+              <span class="mx-3">Upgrade</span>
+          <% end %>
+
+          <%= link_to root_path, class: ["flex items-center mt-4 py-2 px-6 text-gray-700 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-700", ("bg-gray-200" if request.path == root_path)] do %>
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                  </path>
+              </svg>
+              <span class="mx-3">My Plan</span>
+          <% end %>
+
+          <%= link_to edit_user_registration_path, class: ["flex items-center mt-4 py-2 px-6 text-gray-700 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-700", ("bg-gray-200" if request.path == edit_user_registration_path)] do %>
+              <i class="fas fa-user fa-lg"></i>
+              <span class="mx-3">My Account</span>
+          <% end %>
+
+          <%= link_to root_path, class: ["flex items-center mt-4 py-2 px-6 mb-4 text-gray-700 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-700", ("bg-gray-200" if request.path == root_path)] do %>
+              <i class="fas fa-file-invoice-dollar fa-lg"></i>
+              <span class="mx-3">Billing</span>
+          <% end %>
+
+          <hr class="border-gray-500"></hr>
+
+          <%= link_to destroy_user_session_path, method: :delete, class: "flex items-center mt-4 py-2 px-6 text-gray-700 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-700" do %>
+              <i class="fas fa-sign-out-alt fa-lg"></i>
+              <span class="mx-3">Logout</span>
+          <% end %>
+
+      </div>
+    
+    </nav>
+  </div>
+</div>
