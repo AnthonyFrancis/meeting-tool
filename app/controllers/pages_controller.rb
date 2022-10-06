@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def mailbox
+  end
 end
