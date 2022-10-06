@@ -33,6 +33,7 @@
 }
 
 </style>
+<div class="bg-slate-100">
 <div class="container xl:px-24 m-auto ">
 
         <!-- component -->
@@ -43,7 +44,7 @@
                 class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
 
             <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-                class="scrollbar border-gray-300 fixed z-30 inset-y-0 left-0 w-52 transition duration-300 transform bg-white dark:bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+                class="scrollbar bg-slate-100 border-gray-300 fixed z-30 inset-y-0 left-0 w-52 transition duration-300 transform bg-white dark:bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
               
                 <nav class="flex flex-col mt-8 px-4 text-center">
                     <!-- inbox -->
@@ -191,7 +192,7 @@
                 </nav>
             </div>
 
-            <div class="flex-1 flex flex-col overflow-hidden">
+            <div class="flex-1 flex flex-col overflow-hidden bg-slate-100">
                 <header class=" justify-between items-center mt-6 px-2 border-b-2 border-gray-300">
                     <div class="items-center space-x-2 lg:space-x-0">
                         <button @click="sidebarOpen = true"
@@ -205,14 +206,14 @@
                             <!--sub navbar -->
                             <div class=" inline-flex justify-center">
                  <span class="-py-1 pr-6"> <input type="checkbox" name=""></span>
-                <span class="px-2 -ml-1 font-semibold  border-b-2 border-orange">Buyers
+                <span class="px-2 -ml-1 font-semibold  border-b-2 border-orange">Primary
             <span class="px-2 py-0.5 ml-auto text-xs font-medium
              tracking-wide text-gray-400 bg-gray-200
               rounded-full">4</span>
 
                 </span>
-                <span class="px-2 text-gray-500">All primary</span>
-                <span class="px-2 text-gray-500">Internal</span>
+                <span class="px-2 text-gray-500">Deliverables</span>
+                <span class="px-2 text-gray-500">Follow-ups</span>
                 <span class="px-2 text-gray-500">Social</span>
                 
 
@@ -540,4 +541,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
