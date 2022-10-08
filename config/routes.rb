@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "agenda" => "pages#agenda"
 
+  get "agenda2" => "pages#agenda2"
+
   get "home" => "pages#home"
 
   get "mailbox" => "pages#mailbox"

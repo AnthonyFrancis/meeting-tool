@@ -1,0 +1,678 @@
+<%= render "navbar2" %>
+
+<style>
+.bg-orange{
+  background: #fc5a03;
+}
+.text-orange{
+  color: #fc5a03;
+}
+.border-orange{
+  border-color: #fc5a03;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   --tw-divide-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-divide-opacity));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   --tw-divide-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-divide-opacity));
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   --tw-divide-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-divide-opacity));
+}
+
+</style>
+<div class="bg-slate-100">
+  <div class="container xl:px-24 m-auto ">
+
+    <div class="flex flex-wrap overflow-hidden lg:-mx-3 xl:-mx-2">
+
+      <div class="w-full overflow-hidden lg:my-3 lg:px-3 lg:w-1/3 xl:my-2 xl:px-2 xl:w-1/3">
+        <!-- Column Content -->
+      </div>
+
+      <div class="w-full overflow-hidden lg:my-3 lg:px-3 lg:w-1/3 xl:my-2 xl:px-2 xl:w-1/3">
+        <!-- Column Content -->
+      </div>
+    </div>
+  <!-- component -->
+    <div x-data="{ sidebarOpen: false, darkMode: false }" :class="{ 'dark': darkMode }">
+      <div class="flex flex-wrap overflow-hidden lg:-mx-3 xl:-mx-2">
+        <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden">
+        </div>
+    <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
+    class="scrollbar bg-slate-100 border-gray-300 fixed z-30 inset-y-0 left-0 max-w-sm w-full transition duration-300 transform bg-white dark:bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+
+    <nav class="flex flex-col mt-8 px-4 text-center">
+      <!-- inbox -->
+      <a href="#" class=" border-red-400 relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-2 border-transparent pr-6">
+        <span class="inline-flex justify-center items-center ml-4">
+          <svg class="w-5 h-5 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
+        </span>
+        <span class="ml-2 text-md tracking-wide text-red-500">Inbox</span>
+        <span class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-orange bg-red-50 rounded-full">12</span>
+      </a>
+      <!-- end inbox -->
+      
+      <div class="max-w-sm w-full shadow-lg">
+        <div class="md:p-8 p-5 dark:bg-gray-800 bg-white rounded-t">
+            <div class="px-4 flex items-center justify-between">
+                <span tabindex="0" class="focus:outline-none  text-base font-bold dark:text-gray-100 text-gray-800">October 2020</span>
+                <div class="flex items-center">
+                    <button aria-label="calendar backward" class="focus:text-gray-400 hover:text-gray-400 text-gray-800 dark:text-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="15 6 9 12 15 18"></polyline>
+                    </svg>
+                </button>
+                <button aria-label="calendar forward" class="focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler  icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="9 6 15 12 9 18"></polyline>
+                    </svg>
+                </button>
+
+                </div>
+            </div>
+            <div class="flex items-center justify-between pt-12 overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Mo</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Tu</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">We</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Th</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Fr</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Sa</p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="w-full flex justify-center">
+                                    <p class="text-base font-medium text-center text-gray-800 dark:text-gray-100">Su</p>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                            </td>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                            </td>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">1</p>
+                                </div>
+                            </td>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">2</p>
+                                </div>
+                            </td>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">3</p>
+                                </div>
+                            </td>
+                            <td class="pt-6">
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">4</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">5</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">6</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">7</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="w-full h-full">
+                                    <div class="flex items-center justify-center w-full rounded-full cursor-pointer">
+                                        <a role="link" tabindex="0" class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full">8</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">9</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">10</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">11</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">12</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">13</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">14</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">15</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">16</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">17</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">18</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">19</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">20</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">21</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">22</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">23</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">24</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100">25</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">26</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">27</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">28</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">29</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">30</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b">
+            <div class="px-4">
+                <div class="border-b pb-4 border-gray-400 border-dashed">
+                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>
+                    <a tabindex="0" class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">Zoom call with design team</a>
+                    <p class="text-sm pt-2 leading-4 leading-none text-gray-600 dark:text-gray-300">Discussion on UX sprint and Wireframe review</p>
+                </div>
+                <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">10:00 AM</p>
+                    <a tabindex="0" class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">Orientation session with new hires</a>
+                </div>
+                <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>
+                    <a tabindex="0" class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">Zoom call with design team</a>
+                    <p class="text-sm pt-2 leading-4 leading-none text-gray-600 dark:text-gray-300">Discussion on UX sprint and Wireframe review</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+  
+  </div>
+
+  <div class="flex-1 flex flex-col overflow-hidden bg-slate-100">
+  <header class=" justify-between items-center mt-6 px-2 border-b-2 border-gray-300">
+  <div class="items-center space-x-2 lg:space-x-0">
+  <button @click="sidebarOpen = true"
+  class="text-gray-500 dark:text-gray-300 focus:outline-none lg:hidden">
+  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 6H20M4 12H20M4 18H11" stroke="currentColor" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  </button>
+  <div class=" flex justify-between">
+  <!--sub navbar -->
+  <div class=" inline-flex justify-center">
+  <span class="-py-1 pr-6"> <input type="checkbox" name=""></span>
+  <span class="px-2 -ml-1 font-semibold  border-b-2 border-orange">Primary
+  <span class="px-2 py-0.5 ml-auto text-xs font-medium
+  tracking-wide text-gray-400 bg-gray-200
+  rounded-full">4</span>
+
+  </span>
+  <span class="px-2 text-gray-500">Deliverables</span>
+  <span class="px-2 text-gray-500">Follow-ups</span>
+  <span class="px-2 text-gray-500">Shared</span>
+
+
+  </div>
+  <div class="inline-flex py-3 -mt-4">
+  <!-- The searchbar -->
+       <form method="GET">
+  <div class="relative text-gray-600 focus-within:text-gray-400">
+  <span class="absolute inset-y-0 left-0 flex items-center pr-2">
+  <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+  </button>
+  </span>
+  <input type="search" name="q" class="py-2 text-sm text-white  rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+  </div>
+  </form>
+
+  </div>
+  </div>
+  </div>
+
+  </header>
+  <!-- main -->
+  <main class="flex-1 overflow-x-hidden overflow-y-auto">
+  <div class="px-10 py-2 mt-1">
+  <span class="text-gray-500 font-semibold">
+  Today
+  </span>
+  </div>
+  <!-- today tab 1 -->
+  <div class="container mx-auto w-full px-6 -mb-2 ">
+  <div class="mt-4 flex px-4 py-4 justify-between bg-white
+  dark:bg-gray-600 shadow-sm rounded-lg cursor-pointer">
+  <!-- Card -->
+
+  <div class="flex justify-center">
+  <!-- Left side -->
+
+  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"  alt="">
+
+  <div class="px-2 flex flex-col capitalize text-gray-600">
+  <span class="font-bold text-md">brian</span>
+  <span class="mt-1 text-gray-400 text-sm font-semibold">
+  23 THREADS
+  </span>
+  </div>
+
+  </div>
+
+  <div class="flex pr-8">
+  <!-- Rigt side -->
+
+  <div class="ml-16 pl-4 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+
+  <span class="mt-2 bg-red-100 text-semibold text-red-400 px-4 py-1 rounded text-black dark:text-gray-200">
+  New
+  </span>
+  </div>
+
+  <div class="ml-4 pt-2 flex flex-col capitalize text-gray-600
+  ">
+  <div>
+  <span class="mt-2 flex">
+  <img class="inline-block h-8 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  </span>
+  </div>
+  </div>
+
+  <div class="ml-16 pt-3 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+  <p><span class="font-bold">New Chili piper license - </span>Hey Schott, have you lorem ipsum dolor sit  amet</p>
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <!-- taday tab 2 -->
+  <div class="container mx-auto w-full px-6 -mb-2 ">
+  <div class="mt-4 flex px-4 py-4 justify-between bg-white
+  dark:bg-gray-600 shadow-sm rounded-lg cursor-pointer">
+  <!-- Card -->
+
+  <div class="flex justify-center">
+  <!-- Left side -->
+
+  <img class="h-12 w-12 rounded-full object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+
+  <div class="px-4 flex flex-col capitalize text-gray-600">
+  <span class="font-bold text-md">Tom cook</span>
+  <span class="mt-1 text-gray-400 text-sm font-semibold">
+  1 THREAD
+  </span>
+  </div>
+
+  </div>
+
+  <div class="flex pr-8">
+  <!-- Rigt side -->
+
+  <div class="ml-16 pl-4 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+
+  <span class="mt-2 bg-red-100 text-semibold text-red-400 px-4 py-1 rounded text-black dark:text-gray-200">
+  New
+  </span>
+  </div>
+
+  <div class="ml-4 pt-2 flex flex-col capitalize text-gray-600
+  ">
+  <div>
+  <span class="mt-2 flex">
+  <img class="inline-block h-8 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  </span>
+  </div>
+  </div>
+
+  <div class="ml-16 pt-3 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+  <p><span class="font-bold">New Chili piper license - </span>Hey Schott, have you lorem ipsum dolor sit  amet</p>
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <!-- end of today tab 2 -->
+
+  <!-- today tab 3 -->
+  <!-- end of today tab 3 -->
+  <!-- yestarday tab 1 -->
+  <div class="px-10 py-2 mt-6">
+  <span class="text-gray-500 font-semibold">
+  Upcoming
+  </span>
+  </div>
+  <!-- today tab 1 -->
+  <div class="container mx-auto w-full px-6 -mb-2 ">
+  <div class="mt-1 flex px-4 py-4 justify-between bg-white
+  dark:bg-gray-600 shadow-sm rounded-lg cursor-pointer">
+  <!-- Card -->
+
+  <div class="flex justify-center">
+  <!-- Left side -->
+
+  <img class="h-12 w-12 rounded-full object-cover" src="https://i.pravatar.cc/30?2" alt="">
+
+  <div class="px-4 flex flex-col capitalize text-gray-600">
+  <span class="font-bold text-md">Nickolas</span>
+  <span class="mt-1 text-gray-400 text-sm font-semibold">
+  3 THREADS
+  </span>
+  </div>
+
+  </div>
+
+  <div class="flex pr-8">
+  <!-- Rigt side -->
+
+  <div class="ml-16 pl-4 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+
+  <span class="mt-2 bg-red-100 text-semibold text-red-400 px-4 py-1 rounded text-black dark:text-gray-200">
+  New
+  </span>
+  </div>
+
+  <div class="ml-4 pt-2 flex flex-col capitalize text-gray-600
+  ">
+  <div> 
+  <span class="mt-2 flex">
+  <img class="inline-block h-8 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  </span>
+  </div>
+  </div>
+
+  <div class="ml-16 pt-3 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+  <p><span class="font-bold">New Chili piper license - </span>Hey Schott, have you lorem ipsum dolor sit  amet</p>
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <!-- end of yesterday tab 1 -->
+  <!-- start of yesterday tab 2-->
+
+  <div class="container mx-auto w-full px-6 -mb-2 ">
+  <div class="mt-4 flex px-4 py-4 justify-between bg-white
+  dark:bg-gray-600 shadow-sm rounded-lg cursor-pointer">
+  <!-- Card -->
+
+  <div class="flex justify-center">
+  <!-- Left side -->
+
+  <img class="h-12 w-12 rounded-full object-cover" src="https://i.pravatar.cc/30?3" alt="">
+
+  <div class="px-4 flex flex-col capitalize text-gray-600">
+  <span class="font-bold text-md">Nickolas</span>
+  <span class="mt-1 text-gray-400 text-sm font-semibold">
+  3 THREADS
+  </span>
+  </div>
+
+  </div>
+
+  <div class="flex pr-8">
+  <!-- Rigt side -->
+
+  <div class="ml-16 pl-4 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+
+  <span class="mt-2 bg-red-100 text-semibold text-red-400 px-4 py-1 rounded text-black dark:text-gray-200">
+  New
+  </span>
+  </div>
+
+  <div class="ml-4 pt-2 flex flex-col capitalize text-gray-600
+  ">
+  <div>
+
+  <span class="mt-2 flex">
+  <img class="inline-block h-8 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  </span>
+  </div>
+  </div>
+
+  <div class="ml-16 pt-3 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+  <p><span class="font-bold">New Chili piper license - </span>Hey Schott, have you lorem ipsum dolor sit  amet</p>
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <!-- end of yesterday tab 2-->
+
+  <div class="px-10 py-2 mt-6">
+  <span class="text-gray-500 font-semibold">
+  27 MAR
+  </span>
+  </div>
+  <!-- 27 mar tab 1 -->
+
+
+
+  <!-- end 27 mar tab 1 -->
+  <!-- start of 27 mar tab 2 -->
+
+  <div class="container mx-auto w-full px-6 -mb-2 ">
+  <div class="mt-4 flex px-4 py-4 justify-between bg-white
+  dark:bg-gray-600 shadow-sm rounded-lg cursor-pointer">
+  <!-- Card -->
+
+  <div class="flex justify-center">
+  <!-- Left side -->
+
+  <img class="h-12 w-12 rounded-full object-cover" src="https://i.pravatar.cc/30?4" alt="">
+
+  <div class="px-4 flex flex-col capitalize text-gray-600">
+  <span class="font-bold text-md">Kenny</span>
+  <span class="mt-1 text-gray-400 text-sm font-semibold">
+  2 THREADS
+  </span>
+  </div>
+
+  </div>
+
+  <div class="flex pr-8">
+  <!-- Rigt side -->
+
+  <div class="ml-16 pl-4 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+
+  <span class="mt-2 bg-red-100 text-semibold text-red-400 px-4 py-1 rounded text-black dark:text-gray-200">
+  New
+  </span>
+  </div>
+
+  <div class="ml-4 pt-2 flex flex-col capitalize text-gray-600
+  ">
+  <div>
+
+  <span class="mt-2 flex">
+  <img class="inline-block h-8 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+  </span>
+  </div>
+  </div>
+
+  <div class="ml-16 pt-3 flex flex-col capitalize text-gray-600
+  dark:text-gray-400">
+  <p><span class="font-bold">New Chili piper license - </span>Hey Schott, have you lorem ipsum dolor sit  amet</p>
+  </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+  <!-- end of 27 mar tab 2 -->
+  </main>
+  <!-- end of main -->
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
